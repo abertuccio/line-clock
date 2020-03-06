@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+  <title>HGLT</title>
+</head>
+
+<body>
+  <div id="actions-wrapper">
+    <div class="buttons custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="highlight">
+      <label id="checkbox-label" class="custom-control-label" for="highlight"></label>
+    </div>
+    <div class="buttons custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="highlight-site">
+      <label id="checkbox-label-site" class="custom-control-label" for="highlight-site"></label>
+    </div>
+    <div class="buttons" id="settings"><span id="setting-text"></span> <i id="more"
+        class="material-icons more">keyboard_arrow_down</i></div>
+    <div class="settings hide">
+      <div>
+        <label id="translation-checkbox-label" for="translation">Translate</label>
+        <input id="translation" type="checkbox" name="translation">
+      </div>
+      <div>
+        <label id="translation-from-label">From </label>
+        <select id="translation-from-target">
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+      <div>
+        <label id="translation-to-label">To </label>
+        <select id="translation-target">
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+      <hr />
+      <div>
+        <label id="pronunciation-checkbox-label" for="pronunciation">Pronunciation</label>
+        <input id="pronunciation" type="checkbox" name="pronunciation">
+      </div>
+      <hr />
+      <div>
+        <label id="definition-checkbox-label" for="definition">Definition</label>
+        <input id="definition" type="checkbox" name="definition">
+        <span id="definition-checkbox-label-in"> in </span>
+        <select id="definition-target">
+          <option value="auto">Auto</option>
+        </select>
+      </div>
+      <hr />
+      <div>
+        <label id="image-checkbox-label" for="image">Images</label>
+        <input id="image" type="checkbox" name="image">
+      </div>
+      <hr />
+      <div>
+        <label id="stored-markers-checkbox-label" for="stored-markers">Highlight stored elements</label>
+        <input id="stored-markers" type="checkbox" name="stored-markers">
+        <i id="stored-markers-help" title="Highlight every stored element in each site you visit"
+          class="material-icons help">help_outline</i>
+      </div>
+    </div>
+    <div class="buttons" id="markers"><span id="markers-text">Markers</span>
+      <i id="more-markers" class="material-icons more">keyboard_arrow_down</i>
+      <i id="markers-help" title="Once you opened one of this sites, you could browse through marker doing Ctrl+Alt+m"
+        class="material-icons help">help_outline</i>
+    </div>
+    <div class="markers hide">
+    </div>
+    <hr />
+    <div class="row study-stored-wrapper">
+      <div class="col">
+        <img src="../images/stored.svg" />
+        <div class="buttons" id="stored-elements">Stored elements</div>
+        <span id="stored-badge" class="badge badge-pill badge-primary study-stored-badge">0</span>
+      </div>
+      <div class="col">
+        <img src="../images/study.svg" />
+        <div class="buttons" id="study-elements">Study elements</div>
+        <span id="study-badge" class="badge badge-pill badge-primary study-stored-badge">0</span>
+      </div>
+    </div>
+    <!-- <div id="donate-wrapper">
+      <button id="donate-button">Hacer una donación</button>
+    </div> -->
+
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+
+</html>
